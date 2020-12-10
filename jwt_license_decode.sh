@@ -21,13 +21,16 @@ fi
 
 # output the raw details
 echo "Raw License Details:"
-echo "${JWT_HEADER}"
-echo "${JWT_PAYLOAD}"
+echo "Header:  $(echo "${JWT_HEADER}" | jq -c -C .)"
+echo "Payload: $(echo "${JWT_PAYLOAD}" | jq -c -C .)"
 echo
 
 # output the pretty jq formatted details
 echo "Pretty details:"
+echo "Header:"
 echo "${JWT_HEADER}" | jq .
+echo
+echo "Payload:"
 echo "${JWT_PAYLOAD}" | jq .
 echo
 
