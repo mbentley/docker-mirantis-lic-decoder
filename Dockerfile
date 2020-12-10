@@ -3,6 +3,6 @@ MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
 RUN apk add --no-cache coreutils jq
 
-COPY decode.sh /
+COPY jwt_license_decode.sh /
 
-ENTRYPOINT ["/decode.sh"]
+ENTRYPOINT ["/jwt_license_decode.sh"]
